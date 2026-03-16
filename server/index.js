@@ -13,8 +13,6 @@ const io = new Server(expressServer, {
   },
 });
 
-const port = process.env.PORT || 3001;
-
 // Storing each user's location data
 let locationData = {};
 
@@ -56,6 +54,8 @@ app.get("/", (req, res) => {
   res.send(`Server is running`);
 });
 
-expressServer.listen(port, () => {
-  console.log(`Server is running`);
+const port = process.env.PORT || 3001;
+
+expressServer.listen(port, "0.0.0.0", () => {
+  console.log(`Server is running on port ${port}`);
 });
