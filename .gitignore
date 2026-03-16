@@ -1,0 +1,19 @@
+# .env files
+client/.env
+client/.env.local
+client/.env.production
+
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build output
+client/dist/
+
+# SSL certs
+server/*.pem
+
+# Logs
+*.log
+npm-debug.log*
